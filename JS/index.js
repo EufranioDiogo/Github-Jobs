@@ -123,10 +123,11 @@ let app = new Vue({
             app.numbersOfPages = app.avaibleJobs.length % 5 == 0 ? parseInt(app.avaibleJobs.length / 5) : parseInt(app.avaibleJobs.length / 5) + 1;
 
             app.actualPage = 0;
+            app.selectPage(0)
         },
         selectPage(index){
             app.actualPage = index;
-            app.jobs = app.avaibleJobs.slice(actualPage * 5, actualPage * 5 + 5);
+            app.jobs = app.avaibleJobs.slice(app.actualPage * 5, app.actualPage * 5 + 5);
         }
     },
 })
