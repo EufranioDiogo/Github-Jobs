@@ -1,0 +1,254 @@
+@media only screen and (max-width: 1750px) {
+    body {
+        background-color: #f9fafa;
+    }
+    i{
+        color: #5b5b5b;
+        font-size: 14px;
+        text-align: center;
+    }
+    .github-jobs {
+        display: block;
+        font-family: Poppins, sans-serif;
+        font-size: 3.5rem;
+        font-weight: 200;
+        margin: 20px 0;
+        margin-left: 10%;
+    }
+    .github-jobs strong {
+        font-weight: 600;
+    }
+    .header-conteiner {
+        width: 80%;
+        border-radius: 5px;
+        background-image: url('IMG/pexels-burst-374870.jpg');
+        background-size: cover;
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+        padding: 50px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-conteiner .input-conteiner {
+        width: 60%;
+        padding: 2px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .header-conteiner .input-conteiner i {
+        display: inline-block;
+        width: 5%;
+    }
+    .header-conteiner .input-conteiner input {
+        border: none;
+        font-size: 16px;
+        padding: 10px;
+        color: #373737;
+        font-family: Roboto, sans-serif;
+        width: 80%;
+        height: 100%;
+    }
+    .header-conteiner .input-conteiner button {
+        position: relative;
+        display: inline-block;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 0;
+        background-color: #1ea1fff1;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        width: 15%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .header-conteiner .input-conteiner button:hover{
+        background-color: #0095ff;
+    }
+    .main-conteiner {
+        position: relative;
+        display: flex;
+        width: 80%;
+        margin: 25px auto;
+        justify-content: space-between;
+    }
+    .jobs-result {
+        width: 70%;
+        position: relative;
+        display: block;
+    }
+    .jobs-result-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .job-result {
+        display: flex;
+        position: relative;
+        padding: 10px;
+        border-radius: 5px;
+        width: 90%;
+        background-color: #fff;
+        justify-content: space-between;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
+        margin: 15px 0;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .job-result:hover{
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.139);
+    }
+    .job-result .company-logo {
+        height: 9rem;
+        width: 9rem;
+        margin-right: 1rem;
+        position: relative;
+    }
+    .job-result .job-brief-desc {
+        width: 85%;
+        border-radius: 0 0.5rem 0.5rem 0;
+        position: relative;
+    }
+    .job-brief-desc .company-name {
+        font-size: 1.4rem;
+        font-family: Poppins, sans-serif;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+        color: #001329;
+    }
+    .job-brief-desc .title {
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+        color: #1ea1ff;
+        font-size: 22px;
+        margin-bottom: 0.5rem;
+    }
+    .full-time-city-days {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        font-size: 14px;
+        font-family: Poppins, sans-serif;
+        font-weight: 300;
+        margin-top: 1rem;
+    }
+    .full-time-city-days .city-days {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        width: 35%;
+    }
+    .full-time-city-days .city-days i{
+        margin-right: 10px;
+    }
+    .search-parameters {
+        width: 25%;
+        position: relative;
+        display: block;
+    }
+    .location {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .location h2 {
+        font-family: Poppins, sans-serif;
+        font-size: 1.5rem;
+        color: #2b2b2b63;
+    }
+    .location .input-conteiner-location {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .location .input-conteiner-location i {
+        display: block;
+        width: 5%;
+        margin-left: 10px;
+    }
+    .location .input-conteiner-location input {
+        display: block;
+        width: 85%;
+        border: none;
+        padding: 10px 5px;
+        color: #373737;
+    }
+    .location .possible-cities-to-search {
+        display: flex;
+        flex-direction: column;
+    }
+    .p-full-time{
+        display: flex;
+        width: 100%;
+        margin: 5px 0;
+        align-items: center;
+    }
+    .p-full-time span{
+        font-size: 15px;
+        font-family: Roboto, sans-serif;
+        display: block;
+    }
+    .p-full-time input {
+        border: none;
+        display: block;
+        margin-right: 10px;
+        height: 16px;
+    }
+    .location .possible-cities-to-search p {
+        display: flex;
+        width: 100%;
+        margin: 5px 0;
+        align-items: center;
+    }
+    .location .possible-cities-to-search p span {
+        font-size: 15px;
+        font-family: Roboto, sans-serif;
+        display: block;
+        text-transform: capitalize;
+    }
+    .location .possible-cities-to-search p input{
+        border: none;
+        display: block;
+        margin-right: 10px;
+        height: 16px;
+    }
+    .pages{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 50%;
+    }
+    .pages .pages-list{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    .pages-list li{
+        margin: 0 10px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #0095ff;
+        font-family: Roboto, sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        color: #0095ff;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .pages-list li:hover{
+        background-color: #0095ff;
+        color: #fff;
+    }
+}
