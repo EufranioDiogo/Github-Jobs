@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/universal.css">
+    <link rel="stylesheet" href="../CSS/view-more.css">
+    <title>Github Jobs - The easy way to reach your job</title>
+</head>
+
+<body>
+    <button id="go-back">
+        <i class="fas fa-arrow-left"></i>Go back
+    </button>
+    <div id="main-app">
+        <div class="company-desc">
+            <img :src="job.company_logo" alt="job.company" class="company-logo">
+            <div class="company-info">
+                <p><strong>Name: </strong> {{ job.company }}</p>
+                <p><strong>Location: </strong> {{ job.location }}</p>
+                <p v-html><strong>Site: </strong> {{ job.company_url }}</p>
+                <p><strong>Created at: </strong> {{ job.created_at}}</p>
+            </div>
+        </div>
+        <h1 class="title"> {{ job.title }}</h1>
+        <h3 class="type" v-if="job.type"> Full Time</h3>
+        <h2 class="principal-titles">Description</h2>
+        <p v-html="job.description">
+        </p>
+        <h2 class="principal-titles">How apply?</h2>
+        <p v-html="job.how_to_apply">
+        </p>
+    </div>
+    <footer>
+        <h3>Eufránio Diogo @ DevChallenges</h3>
+    </footer>
+    <script src="../JS/view-more.js"></script>
+</body>
+
+</html>

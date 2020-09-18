@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/footer.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="CSS/universal.css">
@@ -14,41 +15,34 @@
 </head>
 
 <body>
+  <img src="IMG/octocat.png" class="octocat-img" alt="">
   <h1 class="github-jobs"><strong>Github</strong> Jobs</h1>
   <div id="main-app">
 
     <header-component @new-description="newDescription" @search-for-jobs="searchForJobs"></header-component>
+
     <div class="main-conteiner">
       <div class="jobs-result">
-        <ul class="jobs-result-list">
-          <li v-for="job in jobs" class="job-result">
-            <img
-              :src="job.company_logo"
-              :alt="job.company" class="company-logo">
-            <div class="job-brief-desc">
-              <h3 class="company-name"> {{ job.company }}</h3>
-              <h2 class="title">{{ job.title }}</h2>
-              <div class="full-time-city-days">
-                <p>{{ job.type }}</p>
-                <div class="city-days">
-                  <p><i class="fas fa-globe-africa"></i>{{ job.location }}</p>
-                  <p><i class="far fa-clock"></i>{{ job.created_at }}</p>
-                </div>
-              </div>
-            </div>
-          </li>
+        <ul v-if="avaibleJobs.length" class="jobs-result-list">
+          <job-component v-for="job in jobs" :job="job" @view-more="viewMore"></job-component>
         </ul>
+        <p v-else class="no-job">No Jobs Found! We feel sorry about that</p>
+
         <div class="pages">
           <ul class="pages-list">
-            <li v-for="(number, index) in numbersOfPages" @click="selectPage(index)">{{ number }}</li>
+            <li v-for="(number, index) in numbersOfPages" :class="{active: index == 0 ? true : false}" @click="selectPage(index)">{{ number }}</li>
           </ul>
         </div>
+    
       </div>
 
-      <search-parameters :citiestosearch="citiesToSearch" @search-city="newCityToSearch"></search-parameters>
+      <search-parameters :citiestosearch="citiesToSearch" @search-city="newCityToSearch" @is-full-time-checked="fullTimeSet"></search-parameters>
       
     </div>
   </div>
+  <footer>
+    <h3>Eufránio Diogo @ DevChallenges</h3>
+  </footer>
   <script src="JS/index.js"></script>
 </body>
 

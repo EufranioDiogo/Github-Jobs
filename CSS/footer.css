@@ -1,0 +1,12 @@
+footer{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Roboto;
+    color: #001329;
+    border-radius: 5px 5px 0 0;
+    background-color: #fff;
+}
+footer h3{
+    padding: 16px 0;
+}
